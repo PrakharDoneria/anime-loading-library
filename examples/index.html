@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Loading Example</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .loading-container {
+      text-align: center;
+    }
+
+    .loading-text {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <h2 class="loading-text">Loading...</h2>
+    <div id="loadingIndicator"></div>
+  </div>
+
+  <script src="../dist/anime-loading.min.js"></script>
+  <script>
+    // Example usage
+    const loadingIndicator = new AnimeLoading(document.getElementById('loadingIndicator'));
+    
+    // Show the loading indicator
+    loadingIndicator.show();
+
+    // Simulate loading for 3 seconds (for demonstration purposes)
+    setTimeout(() => {
+      // Hide the loading indicator after 3 seconds
+      loadingIndicator.hide();
+    }, 3000);
+  </script>
+</body>
+</html>
